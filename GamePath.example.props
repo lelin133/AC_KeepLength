@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+    <!-- Copy to GamePath.local.props and replace this example. -->
+    <GameDir>D:/Games/Aicomi</GameDir>
+  </PropertyGroup>
+</Project>

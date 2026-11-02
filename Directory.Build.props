@@ -1,0 +1,13 @@
+<Project>
+  <Import Project="GamePath.local.props" Condition="Exists('GamePath.local.props')" />
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Deterministic>true</Deterministic>
+    <UseSharedCompilation>false</UseSharedCompilation>
+    <CheckEolTargetFramework>false</CheckEolTargetFramework>
+    <GameDir Condition="'$(GameDir)' == ''">$(AICOMI_GAME_DIR)</GameDir>
+  </PropertyGroup>
+</Project>

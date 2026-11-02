@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+<PropertyGroup><AssemblyName>AC_KeepLength</AssemblyName><Version>0.10.1</Version></PropertyGroup>
+<ItemGroup>
+<Reference Include="$(GameDir)/BepInEx/core/BepInEx.Core.dll" Private="false" />
+<Reference Include="$(GameDir)/BepInEx/core/BepInEx.Unity.IL2CPP.dll" Private="false" />
+<Reference Include="$(GameDir)/BepInEx/core/0Harmony.dll" Private="false" />
+<Reference Include="$(GameDir)/BepInEx/core/Il2CppInterop.Runtime.dll" Private="false" />
+<Reference Include="$(GameDir)/BepInEx/interop/Assembly-CSharp.dll" Private="false" />
+<Reference Include="$(GameDir)/BepInEx/interop/ILGLib.dll" Private="false" />
+<Reference Include="$(GameDir)/BepInEx/interop/Il2Cppmscorlib.dll" Private="false" />
+<Reference Include="$(GameDir)/BepInEx/interop/UnityEngine.CoreModule.dll" Private="false" />
+<Reference Include="$(GameDir)/BepInEx/interop/UnityEngine.InputLegacyModule.dll" Private="false" />
+</ItemGroup>
+<Target Name="CheckGameDirectory" BeforeTargets="ResolveReferences">
+  <Error Condition="'$(GameDir)' == ''" Text="Set GameDir (-p:GameDir=...) or AICOMI_GAME_DIR to your local Aicomi directory." />
+  <Error Condition="'$(GameDir)' != '' and !Exists('$(GameDir)/BepInEx/interop/Assembly-CSharp.dll')" Text="GameDir is missing BepInEx/interop/Assembly-CSharp.dll; generate interop assemblies first." />
+</Target>
+</Project>
