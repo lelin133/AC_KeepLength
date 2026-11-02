@@ -1,0 +1,17 @@
+**/bin/
+**/obj/
+.vs/
+.idea/
+*.user
+*.suo
+GamePath.local.props
+**/*.dll
+**/*.pdb
+**/*.log
+**/*.jsonl
+backups/
+checks/
+dist/
+BepInEx/
+.packages/
+# artifacts/*.zip is intentionally included.
