@@ -12,6 +12,7 @@ GamePath.local.props
 backups/
 checks/
 dist/
+releases/
 BepInEx/
 .packages/
 # artifacts/*.zip is intentionally included.
